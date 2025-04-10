@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+
+
+<!-- Add To Do Form Start -->
+<div class="container mt-4">
+  <h2>Update To Do</h2>
+  <form action="/update/{{todo.sno}}" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">To Do Title</label>
+      <input type="text" class="form-control" name="title" id="title" value="{{todo.title}}">
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">To Do Description</label>
+      <input type="text" class="form-control" value="{{todo.desc}}" name="desc" id="desc">
+    </div>
+    <button type="submit" class="btn btn-dark">Update</button>
+  </form>
+</div>
+<!-- Add To Do Form End -->
+
+<!-- To Do List Display Start -->
+
+<!-- To Do List Display End -->
+
+</body>
+
+</html>
+{% endblock body %}
